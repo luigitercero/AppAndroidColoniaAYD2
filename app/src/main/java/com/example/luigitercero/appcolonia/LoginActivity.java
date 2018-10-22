@@ -136,7 +136,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         UserApiService client = retrofit.create(UserApiService.class);
         Call<LoginAcces> call =client.createUser(user);
 
-
         call.enqueue(new Callback<LoginAcces>() {
 
 

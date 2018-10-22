@@ -1,6 +1,7 @@
 package com.example.luigitercero.appcolonia.Models;
 
-public class Noticia {
+public class Noticia2 {
+
     public int getId() {
         return id;
     }
@@ -25,27 +26,23 @@ public class Noticia {
         Descripcion = descripcion;
     }
 
-    public int getUserId() {
-        return UserId;
+    public String getUserId() {
+        return UsuarioId;
     }
 
-    public void setUserId(int userId) {
-        UserId = userId;
+    public void setUserId(String userId) {
+        UsuarioId = userId;
     }
 
     private int id;
 
-    public Noticia(String nombre, String descripcion, int userId) {
+    public Noticia2(String nombre, String descripcion, String userId) {
         Nombre = nombre;
         Descripcion = descripcion;
-        UserId = userId;
+        UsuarioId = userId;
     }
 
     private String Nombre;
-     private String Descripcion;
-     private int UserId;
-
-
-
-
+    private String Descripcion;
+    private String UsuarioId;
 }

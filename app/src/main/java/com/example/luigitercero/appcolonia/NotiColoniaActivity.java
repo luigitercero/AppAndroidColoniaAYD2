@@ -1,5 +1,6 @@
 package com.example.luigitercero.appcolonia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,6 +9,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.luigitercero.appcolonia.ApiServer.NoticiasApiServer;
@@ -32,6 +35,7 @@ public class NotiColoniaActivity extends NavigationActivity {
     private ListNotiAdapter listNotiAdapter;
     private int offset;
     private boolean aptoParaCargar;
+    private Button agregarNoticia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +48,24 @@ public class NotiColoniaActivity extends NavigationActivity {
         listNotiAdapter = new ListNotiAdapter(this);
         recyclerView.setAdapter(listNotiAdapter);
         recyclerView.setHasFixedSize(true);
+        agregarNoticia = (Button)  findViewById(R.id.sendDatabutton2);
         final GridLayoutManager layoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(layoutManager);
-
-
         retrofit = new Retrofit.Builder()
                 .baseUrl("http://35.229.53.20:3002/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         obtenerDatos();
+        agregarNoticia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent noti = new Intent(NotiColoniaActivity.this,AddsNotiActivity.class);
+                startActivity(noti);
+            }
+        });
+
+
     }
 
     private void obtenerDatos() {

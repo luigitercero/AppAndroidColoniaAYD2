@@ -14,7 +14,7 @@ public class MainAtivity extends AppCompatActivity {
         global.setIdCodigo("6");
         super.onCreate(savedInstanceState);
         finish();
-        Intent Login = new Intent(MainAtivity.this,AddsNotiActivity.class);
+        Intent Login = new Intent(MainAtivity.this,LoginActivity.class);
         startActivity(Login);
     }
 
