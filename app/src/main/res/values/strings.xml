@@ -27,4 +27,5 @@
     <string name="title_activity_add_noticia">AddNoticiaActivity</string>
     <string name="title_activity_probando_botton">ProbandoBotton</string>
     <string name="title_activity_add_noti">AddNotiActivity</string>
+    <string name="title_activity_adds_noti">AddsNotiActivity</string>
 </resources>

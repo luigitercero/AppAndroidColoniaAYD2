@@ -44,8 +44,8 @@
             android:name=".AreaActivity"
             android:label="@string/title_activity_area" />
         <activity
-            android:name=".AddNotiActivity"
-            android:label="@string/title_activity_add_noti"
+            android:name=".AddsNotiActivity"
+            android:label="@string/title_activity_adds_noti"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
